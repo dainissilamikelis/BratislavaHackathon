@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BasePage from '../BasePage/BasePage';
 import DropDown from '../../atoms/DropDown/DropDown';
 import PrimaryButton, { BaseButtonStyle } from '../../atoms/Buttons/PrimaryButton';
+import {TransitionsModal} from "../../molecules/Modal/Modal";
 
 function SelectOption(label, value) {
     return {
@@ -24,6 +25,7 @@ class HomePage extends Component {
         optionValue0: 0,
         optionValue1: 0,
         goOptionValue: 0,
+        modalOpen: true,
     }
 
 
@@ -50,9 +52,11 @@ class HomePage extends Component {
             optionValue0,
             optionValue1,
             goOptionValue,
+            modalOpen,
         } = this.state;
         return (
             <BasePage>
+                <TransitionsModal open={modalOpen} handleClose={()=>this.setState({modalOpen: false})} />
                 <h1> Hey there! </h1>
                 <h2> Where do you want to go?</h2>
                 <div>
