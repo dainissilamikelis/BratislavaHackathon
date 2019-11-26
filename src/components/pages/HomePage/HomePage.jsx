@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BasePage from '../BasePage/BasePage';
 import DropDown from '../../atoms/DropDown/DropDown';
 import PrimaryButton, { BaseButtonStyle } from '../../atoms/Buttons/PrimaryButton';
+import RowInput from '../../molecules/RowInput/RowInput';
 import {TransitionsModal} from "../../molecules/Modal/Modal";
 
 function SelectOption(label, value) {
@@ -14,89 +15,159 @@ function SelectOption(label, value) {
 const titleStyle = {
     marginRight: '15px',
 }
-const GoOptions = [SelectOption('-', 0), SelectOption('Work', 1), SelectOption('Travel', 2)];
-const CountryOptions = [SelectOption('-', 0), SelectOption('Ukraine', 1), SelectOption('France', 2)];
+
+function createOptions(options) {
+    const newOptions = [];
+    options.forEach( (o, i) => {
+        newOptions.push(SelectOption(o, i))
+    })
+
+    return newOptions;
+
+}
+
+const GoOptions = createOptions(['-', 'Work', 'Travel']);
+const CountryOptions = createOptions(['-', 'Ukraine', 'France']);
+const VisitOptions = createOptions(['-', 'Friend', 'Tourist', 'Other']);
+const PeriodOptions = createOptions([
+    '-',
+    '6 months',
+    '2 years',
+    '5 years',
+    '10 years',
+    ]);
+
+const SpecialPeriodOptions = createOptions([
+    '-',
+    '1 month',
+    '11 months',
+    '12 months',
+
+])
+const ReasonOptions = createOptions([
+    '-',
+    'for permitted paid engagements',
+    'for private medical treatment and English language study only',
+    'for academics doing research on sabbatical leave and their accompanying child, spouse or partner'
+])
 
 class HomePage extends Component {
     state = {
-        hasDoOption0: false,
-        hasDoOption1: false,
-        hasGoOption: false,
         optionValue0: 0,
         optionValue1: 0,
         goOptionValue: 0,
+        visitOptionValue: 0,
+        reasonOptionsValue: 0,
+        periodOptionValue: 0,
         modalOpen: true,
     }
 
-
-    handleSetDoOption0 = (value) => {
-        const { hasDoOption0: setOption } = this.state;
-        this.setState({ hasDoOption0: !setOption , optionValue0: value })
-    }
-
-    handleSetDoOption1 = (value) => {
-        const { hasDoOption1: setOption } = this.state;
-        this.setState({ hasDoOption1: !setOption, optionValue1: value })
-    }
-
-    handleSetGoOption = (value) => {
-        const { hasGoOption: setOption } = this.state;
-        this.setState({ hasGoOption: !setOption, goOptionValue: value })
+    handleSetOption = (key, value) => {
+         this.setState({ [key]: value });
     }
     
     render() { 
         const {
-            hasDoOption0,
-            hasDoOption1,
-            hasGoOption,
             optionValue0,
             optionValue1,
             goOptionValue,
+            visitOptionValue,
+            reasonOptionsValue,
+            periodOptionValue,
             modalOpen,
         } = this.state;
         return (
             <BasePage>
-                <TransitionsModal open={modalOpen} handleClose={()=>this.setState({modalOpen: false})} />
                 <h1> Hey there! </h1>
-                <h2> Where do you want to go?</h2>
-                <div>
-                    <h3 style={titleStyle}> I want to go to the </h3>
-                    <div>
-                        <DropDown
-                            options={CountryOptions}
-                            onChange={this.handleSetDoOption0}
-                            value={optionValue0}
-                        />
-                    </div>
-                </div>
-                <div>
-                    <h3 style={titleStyle}>and I am going from the </h3>
-                    <div>
-                        <DropDown
-                            options={CountryOptions}
-                            onChange={this.handleSetDoOption1}
-                            value={optionValue1}
-                        />
-                    </div>
-                </div>
-                {
-                    hasDoOption0 > 0 && hasDoOption1 > 0 ? (
-                        <div>
-                            <h3> and I want to </h3>
-                                <DropDown
+                <table style={{ margin: 'auto'}}>
+                    <tbody>
+                        <RowInput title="I want to go to">
+                            <DropDown
+                                options={CountryOptions}
+                                onChange={this.handleSetOption}
+                                label="optionValue0"
+                                value={optionValue0}
+                            />
+                        </RowInput>
+                        <RowInput title="I am going from">
+                            <DropDown
+                                options={CountryOptions}
+                                onChange={this.handleSetOption}
+                                label="optionValue1"
+                                value={optionValue1}
+                            />
+                        </RowInput>
+                        <RowInput title="What do you want to do ?">
+                            <DropDown
                                 options={GoOptions}
-                                onChange={this.handleSetGoOption}
+                                onChange={this.handleSetOption}
+                                label="goOptionValue"
                                 value={goOptionValue}
                             />
-                        </div>
-                    ) : null
-                }
+                        </RowInput>
+                        <RowInput title="Which type of Visitor Visa are you applying for ?">
+                            <DropDown
+                                options={VisitOptions}
+                                onChange={this.handleSetOption}
+                                label="visitOptionValue"
+                                value={visitOptionValue}
+                            />
+                        </RowInput>
+                        {
+                            visitOptionValue === 3 ? (
+                                <RowInput title="Please specify">
+                                    <input style={{ padding: '10px' }}type="text" />
+                                </RowInput>
+                            ) : null
+                        }
+                        <RowInput title="Is there a special reason ?">
+                            <DropDown
+                                options={ReasonOptions}
+                                onChange={this.handleSetOption}
+                                label="reasonOptionsValue"
+                                value={reasonOptionsValue}
+                            />
+                        </RowInput>
+                        {
+                            reasonOptionsValue > 0 ? 
+                            (
+                                <RowInput title="You can stay for ">
+                                    <p>{SpecialPeriodOptions[reasonOptionsValue].label}</p>
+                                </RowInput>
+                            ) : (
+                                <RowInput title="How long do you want to stay ?">
+                                    <DropDown
+                                        options={PeriodOptions}
+                                        onChange={this.handleSetOption}
+                                        label="periodOptionValue"
+                                        value={periodOptionValue}
+                                        />
+                                </RowInput>
+                            )
+                        }
+                        <RowInput title="When do you plan to arrive?">
+                            <input style={{ padding: '10px' }} type="date" />
+                        </RowInput>
+                        <RowInput title="When do you plan to leave?">
+                            <input style={{ padding: '10px' }} type="date" />
+                        </RowInput>
+                    </tbody>
+                </table>
                 {
-                    hasGoOption ? (
+                        optionValue0 > 0 &&
+                        optionValue1 > 0 &&
+                        goOptionValue > 0 &&
+                        visitOptionValue > 0 &&
+                        (
+                            reasonOptionsValue > 0 ||
+                            periodOptionValue > 0
+                        )
+                    ?  (
                         <div style={{ margin: '15px'}}>
                             <PrimaryButton label="Take me there" style={BaseButtonStyle.action} />
                         </div>
-                    ) : null
+                    )
+                : null
                 }
             </BasePage>
         );

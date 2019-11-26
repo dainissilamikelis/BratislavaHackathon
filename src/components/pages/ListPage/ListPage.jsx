@@ -13,11 +13,11 @@ class ListPage extends Component {
                     fromCountry={"Ukraine"}
                     toCountry={"France"}
                 />
-                <VisaCard
+                {/* <VisaCard
                     type={VisaType.travel}
                     fromCountry={"Ukraine"}
                     toCountry={"France"}
-                />
+                /> */}
             </BasePage>
         );
     }
