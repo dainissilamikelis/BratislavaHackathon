@@ -7,7 +7,10 @@ const workDescription = "Hey! I hear you`re going to work France coming from Ukr
 function styleType (color, variant, description) {
     return {
         variant,
-        backgroundColor: color,
+        style: {
+            backgroundColor: color,
+            cursor: 'pointer',
+        },
         description,
     }
 }
@@ -17,17 +20,14 @@ export const VisaType = {
     travel: styleType('green', 'Travel', travelDescription),
 }
 
-const VisaCard = ({
-    type,
-    fromCountry,
-    toCountry,
-    desc,
-}) => (
-    <BaseCard type={type}> 
+const VisaCard = ({ type, fromCountry, toCountry }) => (
+    <BaseCard
+        type={type.style}
+    > 
         <h3>{type.variant}</h3>
         <h1>{`From ${fromCountry} to ${toCountry}`}</h1>
         <p>{type.description}</p>
     </BaseCard>
-)
+);
  
 export default VisaCard;
