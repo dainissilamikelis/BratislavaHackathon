@@ -1,0 +1,64 @@
+Date : 2019-11-26 18:15:34
+Directory : c:\Users\daini\Documents\BratislavaHackathon\src
+Total : 21 files,  507 codes, 34 comments, 82 blanks, all 623 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| JavaScript React |         15 |        382 |          0 |         62 |        444 |
+| JavaScript       |          3 |        109 |         34 |         18 |        161 |
+| CSS              |          2 |         15 |          0 |          2 |         17 |
+| XML              |          1 |          1 |          0 |          0 |          1 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                  | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                     |         21 |        507 |         34 |         82 |        623 |
+| components                                                                                            |         14 |        350 |          0 |         59 |        409 |
+| components\atoms                                                                                      |          5 |         71 |          0 |         15 |         86 |
+| components\atoms\Buttons                                                                              |          2 |          8 |          0 |          4 |         12 |
+| components\atoms\DropDown                                                                             |          1 |         15 |          0 |          2 |         17 |
+| components\atoms\FromToFlag                                                                           |          1 |          9 |          0 |          3 |         12 |
+| components\atoms\VisaCountryInfo                                                                      |          1 |         39 |          0 |          6 |         45 |
+| components\molecules                                                                                  |          2 |         41 |          0 |          7 |         48 |
+| components\molecules\BaseCard                                                                         |          1 |          4 |          0 |          2 |          6 |
+| components\molecules\VisaCard                                                                         |          1 |         37 |          0 |          5 |         42 |
+| components\organisms                                                                                  |          1 |         23 |          0 |          5 |         28 |
+| components\organisms\NavBar                                                                           |          1 |         23 |          0 |          5 |         28 |
+| components\pages                                                                                      |          6 |        215 |          0 |         32 |        247 |
+| components\pages\BasePage                                                                             |          1 |          4 |          0 |          2 |          6 |
+| components\pages\HomePage                                                                             |          1 |         92 |          0 |          9 |        101 |
+| components\pages\ListPage                                                                             |          1 |         23 |          0 |          3 |         26 |
+| components\pages\VisaPage                                                                             |          2 |         87 |          0 |         15 |        102 |
++-------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                                              | language         | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| c:\Users\daini\Documents\BratislavaHackathon\src\App.css                                              | CSS              |          3 |          0 |          0 |          3 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\App.jsx                                              | JavaScript React |         32 |          0 |          3 |         35 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\App.test.js                                          | JavaScript       |          8 |          0 |          2 |         10 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\components\atoms\Buttons\BaseButton.jsx              | JavaScript React |          4 |          0 |          2 |          6 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\components\atoms\Buttons\PrimaryButton.jsx           | JavaScript React |          4 |          0 |          2 |          6 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\components\atoms\DropDown\DropDown.jsx               | JavaScript React |         15 |          0 |          2 |         17 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\components\atoms\FromToFlag\FromToFlag.jsx           | JavaScript React |          9 |          0 |          3 |         12 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\components\atoms\VisaCountryInfo\VisaCountryInfo.jsx | JavaScript React |         39 |          0 |          6 |         45 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\components\molecules\BaseCard\BaseCard.jsx           | JavaScript React |          4 |          0 |          2 |          6 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\components\molecules\VisaCard\VisaCard.jsx           | JavaScript React |         37 |          0 |          5 |         42 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\components\organisms\NavBar\NavBar.jsx               | JavaScript React |         23 |          0 |          5 |         28 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\components\pages\BasePage\BasePage.jsx               | JavaScript React |          4 |          0 |          2 |          6 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\components\pages\Form.jsx                            | JavaScript React |          9 |          0 |          3 |         12 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\components\pages\HomePage\HomePage.jsx               | JavaScript React |         92 |          0 |          9 |        101 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\components\pages\ListPage\ListPage.jsx               | JavaScript React |         23 |          0 |          3 |         26 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\components\pages\VisaPage\Stepper.jsx                | JavaScript React |         68 |          0 |          7 |         75 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\components\pages\VisaPage\VisaPage.jsx               | JavaScript React |         19 |          0 |          8 |         27 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\index.css                                            | CSS              |         12 |          0 |          2 |         14 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\index.js                                             | JavaScript       |          9 |          3 |          3 |         15 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\logo.svg                                             | XML              |          1 |          0 |          0 |          1 |
+| c:\Users\daini\Documents\BratislavaHackathon\src\serviceWorker.js                                     | JavaScript       |         92 |         31 |         13 |        136 |
+| Total                                                                                                 |                  |        507 |         34 |         82 |        623 |
++-------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
