@@ -1,9 +1,9 @@
 import React from 'react';
 
-const FormExample = () => {
+const FormExample = ({id}) => {
   return (
     <div>
-      <h2>Form example {this.props.id}</h2>
+      <h2>Form example {id}</h2>
     </div>
   );
 };
