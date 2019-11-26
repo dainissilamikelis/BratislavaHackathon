@@ -3,6 +3,7 @@ import BasePage from '../BasePage/BasePage';
 import DropDown from '../../atoms/DropDown/DropDown';
 import PrimaryButton, { BaseButtonStyle } from '../../atoms/Buttons/PrimaryButton';
 import RowInput from '../../molecules/RowInput/RowInput';
+import {TransitionsModal} from "../../molecules/Modal/Modal";
 
 function SelectOption(label, value) {
     return {
@@ -58,6 +59,7 @@ class HomePage extends Component {
         visitOptionValue: 0,
         reasonOptionsValue: 0,
         periodOptionValue: 0,
+        modalOpen: true,
     }
 
     handleSetOption = (key, value) => {
@@ -72,6 +74,7 @@ class HomePage extends Component {
             visitOptionValue,
             reasonOptionsValue,
             periodOptionValue,
+            modalOpen,
         } = this.state;
         return (
             <BasePage>
@@ -170,5 +173,5 @@ class HomePage extends Component {
         );
     }
 }
- 
+
 export default HomePage;

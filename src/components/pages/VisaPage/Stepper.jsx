@@ -5,6 +5,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,10 +33,6 @@ export const HorizontalStepper = ({stepContent, stepInfo}) => {
     setActiveStep(prevActiveStep => prevActiveStep - 1);
   };
 
-  const handleReset = () => {
-    setActiveStep(0);
-  };
-
   return (
     <div className={classes.root}>
       <Stepper activeStep={activeStep} alternativeLabel>
@@ -49,7 +46,9 @@ export const HorizontalStepper = ({stepContent, stepInfo}) => {
         {activeStep === steps.length ? (
           <div>
             <Typography className={classes.instructions}>All steps completed</Typography>
-            <Button onClick={handleReset}>Reset</Button>
+            <Link to={'/team'} style={{textDecoration: 'none'}}>
+            <Button variant="contained" color="secondary">Team</Button>
+            </Link>
           </div>
         ) : (
           <div>
