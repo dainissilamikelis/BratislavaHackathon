@@ -18,9 +18,9 @@ function App() {
             renderToolbar={() => <NavBar/>}
           >
             <Switch>
-              <Route exact path={'/home'} render={()=> <HomePage />}/>
+              <Route exact path={'/'} component={HomePage}/>
+              <Route exact path={'/visa'} component={VisaPage}/>
             </Switch>
-            <HomePage/>
           </Page>
         </Router>
       </div>

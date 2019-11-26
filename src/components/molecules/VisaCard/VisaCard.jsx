@@ -1,4 +1,5 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 import BaseCard from '../BaseCard/BaseCard'
 
 const travelDescription = "Hey! I hear you`re going to travel from Ukraine to France!";
@@ -20,14 +21,14 @@ export const VisaType = {
     travel: styleType('green', 'Travel', travelDescription),
 }
 
-const VisaCard = ({ type, fromCountry, toCountry }) => (
+const VisaCard = withRouter(({ history, type, fromCountry, toCountry }) => (
     <BaseCard
         type={type.style}
-    > 
+        onClick={() => { history.push('/visa') }}> 
         <h3>{type.variant}</h3>
         <h1>{`From ${fromCountry} to ${toCountry}`}</h1>
         <p>{type.description}</p>
     </BaseCard>
-);
+));
  
 export default VisaCard;
