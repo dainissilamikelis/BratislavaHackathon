@@ -1,5 +1,5 @@
 import React from 'react';
-import { Page, Toolbar, Button } from 'react-onsenui'
+import { Page, Toolbar, ToolbarButton } from 'react-onsenui'
 import './App.css';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Page>
         <Toolbar>
-          <Button> I am in onsen </Button>
+          <ToolbarButton> I am in onsen </ToolbarButton>
         </Toolbar>
       </Page>
     </div>
