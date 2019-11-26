@@ -50,6 +50,11 @@ class FormExample extends Component {
 
   render() {
     const { male, female, status } = this.state;
+    if (this.props.id === 1) {
+      return <div>
+        <h2>More forms...</h2>
+      </div>
+    }
     return (
       <div>
         <h2>Form example {this.props.id}</h2>

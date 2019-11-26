@@ -8,7 +8,7 @@ const stepForms = (stepIndex) => {
 };
 
 const getSteps = () => {
-  return ['Basic info', 'Additional info', '...', "Submission"];
+  return ['Basic info', '...', "Submission"];
 };
 
 class VisaPage extends Component {

@@ -43,7 +43,7 @@ export const HorizontalStepper = ({stepContent, stepInfo}) => {
         ))}
       </Stepper>
       <div>
-        {activeStep === steps.length ? (
+        {activeStep === steps.length? (
           <div>
             <Typography className={classes.instructions}>All steps completed</Typography>
             <Link to={'/team'} style={{textDecoration: 'none'}}>
