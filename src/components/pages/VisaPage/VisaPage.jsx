@@ -13,7 +13,7 @@ const stepForms = (stepIndex) => {
 };
 
 const getSteps = () => {
-  return ['Basic info', 'Additional info', '...', "Submission"];
+  return ['Basic info', 'Last', 'Verification', "Submission"];
 };
 
 class VisaPage extends Component {
@@ -31,7 +31,6 @@ class VisaPage extends Component {
     const {modalOpen} = this.state;
     return (
       <div>
-        <FormModal open={modalOpen} handleClose={() => this.setState({modalOpen: false})}/>
         <HorizontalStepper stepContent={(idx) => this.checkModal(idx)} stepInfo={getSteps}/>
       </div>
     );
