@@ -1,0 +1,40 @@
+.team-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+.team-list {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  li {
+    margin: 20px;
+    display: block;
+    list-style: none;
+    h4 {
+      font-weight: bold;
+    }
+  }
+}
+  img {
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    //height: 50vh;
+    align-items: center;
+    justify-content: center;
+  }
+  a {
+    margin: 20px;
+  }
+}
+
+.market-info {
+  h4 {
+    //text-align: left;
+    //margin-left: 70px !important;
+  }
+  h5 {
+    //text-align: right;
+    //margin-right: 250px !important;
+  }
+}
