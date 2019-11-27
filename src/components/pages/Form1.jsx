@@ -97,7 +97,7 @@ class FormExample extends Component {
             </RowInput>
             {
               !specialOther ? (
-                <RowInput title="Is there that special other?">
+                <RowInput title="Please specify">
                   <DropDown
                     options={Status}
                     onChange={this.handleSetOption}

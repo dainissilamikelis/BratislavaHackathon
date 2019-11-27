@@ -50,8 +50,7 @@ const slides = (id) => {
         <h2 className={classes.heading}>Why is this important?</h2>
         <p className={classes.infoText}>More than 15% of Visas from developing countries to UK are rejected
           1/3 of them are due to ‘wrongfully submitted applications</p>
-
-          <Button variant="contained" color="primary" onClick={()=>setSlideId(2)}>Next</Button>
+          <Button variant="contained" color="primary" onClick={handleClose}>Next</Button>
         </div>
       );
     case 2:
@@ -66,7 +65,6 @@ const slides = (id) => {
 }
   return (
     <div>
-
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"

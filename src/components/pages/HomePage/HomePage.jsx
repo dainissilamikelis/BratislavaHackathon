@@ -78,6 +78,7 @@ class HomePage extends Component {
         } = this.state;
         return (
             <BasePage>
+            <TransitionsModal open={modalOpen} handleClose={() => this.setState({ modalOpen: false})}/>
                 <h1> Hey there! </h1>
                 <table style={{ margin: 'auto'}}>
                     <tbody>

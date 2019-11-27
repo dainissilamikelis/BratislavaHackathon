@@ -6,6 +6,7 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {Link} from "react-router-dom";
+import Team from '../presentation/Team';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -45,10 +46,11 @@ export const HorizontalStepper = ({stepContent, stepInfo}) => {
       <div>
         {activeStep === steps.length? (
           <div>
-            <Typography className={classes.instructions}>All steps completed</Typography>
+            {/* <Typography className={classes.instructions}>All steps completed</Typography>
             <Link to={'/team'} style={{textDecoration: 'none'}}>
             <Button variant="contained" color="secondary">Team</Button>
-            </Link>
+            </Link> */}
+            <Team />
           </div>
         ) : (
           <div>

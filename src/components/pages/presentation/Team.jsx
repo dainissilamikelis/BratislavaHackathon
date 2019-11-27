@@ -6,7 +6,21 @@ import img2 from './team-2.jpeg';
 import './styles.scss';
 
 class Team extends Component {
+
+  state = {
+    imgUrl: img1,
+  }
+
+  onEnter = () => {
+    this.setState({ imgUrl: img2})
+  }
+
+  onLeave = () => {
+    this.setState( { imgUrl: img1 })
+  }
+
   render() {
+    const { imgUrl } = this.state;
     return (
       <div className='team-page'>
         <h2>Team</h2>
@@ -16,7 +30,7 @@ class Team extends Component {
           <li><h4>Naomi</h4><p>Social Scientist</p></li>
           <li><h4>Elvijs</h4><p>Software developer</p></li>
         </ul>
-        <img src={img1} alt={'team'}/>
+        <img src={imgUrl} alt={'team'} onMouseEnter={() => this.onEnter()} onMouseLeave={() => this.onLeave()} />
         <Link to='/current' style={{textDecoration: 'none'}}>
           <Button style={{textDecoration: 'none'}} variant="contained" color="secondary">Current Market</Button>
         </Link>
