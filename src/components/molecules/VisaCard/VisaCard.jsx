@@ -5,7 +5,9 @@ import FromToFlag from '../../atoms/FromToFlag/FromToFlag';
 
 const shortTD = 'Hey! I hear you`re going to travel from Ukraine to France! ';
 const shortWD = 'Hey! I hear you`re going to work in France coming from Ukraine'; 
-const travelDescription = shortTD + shortTD + shortTD + shortTD + shortTD;
+const travelDescription =  `This is an application to the short term travel Visa from Ukraine to France.
+After submitting this form, you will need to print it and submit it at the nearest embassy.
+Also, our recommendations are based on our experience, however, they are not legally binding, as we are not representatives of the aforementioned embassy.`;
 const workDescription = shortWD + shortWD + shortWD + shortWD + shortWD;
 
 function styleType (color, variant, description) {
@@ -25,7 +27,7 @@ function styleType (color, variant, description) {
 }
 
 export const VisaType = {
-    work: styleType('#F4F4F4', 'Work', workDescription),
+    work: styleType('#F4F4F4', 'Work', travelDescription),
     travel: styleType('#D9D9D9', 'Travel', travelDescription),
 }
 

@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4b5c65db.chunk.css",
+    "main.js": "/static/js/main.86404acf.chunk.js",
+    "main.js.map": "/static/js/main.86404acf.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8feba452.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8feba452.js.map",
+    "static/css/2.a6fb4615.chunk.css": "/static/css/2.a6fb4615.chunk.css",
+    "static/js/2.1749a518.chunk.js": "/static/js/2.1749a518.chunk.js",
+    "static/js/2.1749a518.chunk.js.map": "/static/js/2.1749a518.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.197d4d9ac25566eb550731cc1a9d3f07.js": "/precache-manifest.197d4d9ac25566eb550731cc1a9d3f07.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.a6fb4615.chunk.css.map": "/static/css/2.a6fb4615.chunk.css.map",
+    "static/css/main.4b5c65db.chunk.css.map": "/static/css/main.4b5c65db.chunk.css.map",
+    "static/media/onsenui.css": "/static/media/ionicons.cfdc1522.ttf",
+    "static/media/team-1.jpeg": "/static/media/team-1.70c60879.jpeg",
+    "static/media/team-2.jpeg": "/static/media/team-2.5924c01f.jpeg",
+    "static/media/timLine.png": "/static/media/timLine.54ff8d5f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8feba452.js",
+    "static/css/2.a6fb4615.chunk.css",
+    "static/js/2.1749a518.chunk.js",
+    "static/css/main.4b5c65db.chunk.css",
+    "static/js/main.86404acf.chunk.js"
+  ]
+}

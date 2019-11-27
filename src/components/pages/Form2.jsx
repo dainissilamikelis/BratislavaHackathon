@@ -63,12 +63,13 @@ class FormExample2 extends Component {
         <h2> Other information </h2>
         <div style={{ maxWidth: "700px", maxHeight:"600px", margin: 'auto'}}>
           <span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-            <span style={{ backgroundColor: 'yellow'}}> some users di it like this </span>
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Our recommendation:
+It seems that you have not previouslly mentioned the part about your financial situation, however, it would be beneficial to include it in more details.
+Currently you mention: <span style={{ backgroundColor: 'yellow'}}> "I have some money in my bank account"  </span>
+<br/>
+One of the previous application mentions it like this: "Currently, I have the amount of money that allows me to go to France and back, and in case of an emergency is sufficient to cover the additional costs for travels".
           </span>
+          <span> Also, you can look at other applications <a href="/"> here </a>  </span>
          </div>
       </div>
     );
